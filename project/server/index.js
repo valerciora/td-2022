@@ -11,8 +11,8 @@ api.get('/motorcycles', function (request, response) {
 });
 
 api.get('/motorcycles/:id', function (request, response) {
-  let car = getMotorcycleById(request.params.id);
-  if (car) response.json(car);
+  let motorcycle = getMotorcycleById(request.params.id);
+  if (motorcycle) response.json(motorcycle);
   response.json('not found');
 });
 
@@ -47,9 +47,11 @@ api.post('/motorcycles', function (request, response) {
 
 api.delete('/motorcycles/:index', function (request, response) {
   // delete din fisier pe baza unui id
-  // cars.splice(request.params.index, 1);
-  console.log(request.params.index);
-  response.json('User with index ' + request.params.index + ' was deleted');
+  let motorcycles = getMotorcycles();
+  motorcycles.splice(request.params.index, 1);
+  console.log('Motorcycle with index ' + request.params.index + ' was deleted');
+  console.dir(motorcycles);
+  response.json(motorcycles);
 });
 
 api.listen(3000, function () {
@@ -67,7 +69,7 @@ function getMotorcycles() {
   return motorcycles;
 }
 
-function saveMotorcycles(motorcycle) {
+function saveMotorcycle(motorcycle) {
   let motorcycles = getMotorcycles();// citire json din fisier
   let maxId = getMaxId(motorcycles);  // get maximum id form cars array
   motorcycle.id = maxId+1;// generare id unic
@@ -93,7 +95,7 @@ function getMotorcycleById(id){
   let motorcycles = getMotorcycles();// citire json din fisier
   let selectedMotorcycle = null;
   for(var i=0; i<motorcycles.length; i++) {
-    if(id == motorcycles[i].id) selectedMotorcycle = motorcycles[i];
+    if(id === motorcycles[i].id) selectedMotorcycle = motorcycles[i];
   }
   return selectedMotorcycle;
 }

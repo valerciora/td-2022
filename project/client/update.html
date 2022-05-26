@@ -6,7 +6,7 @@
     <body>
         <a href="index.html">Home</a>
         <div id="update">
-            Actualizare masina cu id-ul: {{ id }} <br>
+            Update motorcycle with id: {{ id }} <br>
             Name: <input type="text" v-model="motorcycle.name">
             Power: <input type="text" v-model="motorcycle.power">
             <button  v-on:click="update(motorcycle.id)">Save</button>
