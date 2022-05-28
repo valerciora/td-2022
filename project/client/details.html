@@ -7,19 +7,28 @@
 </head>
 
 <body>
-    <a href="index.html">Home</a>
+    <a class="home-btn" href="index.html">Home</a>
     <div id="details">
-        <h1>Detalii pentru produsul cu id-ul: {{ id }}</h1>
+        <h1 class="heading">Details for bike with id: {{ id }}</h1>
         <div class="container">
             <div class="custom"></div>
-            <div class="label">Name:</div>
-            <div class="value">{{motorcycle.name}}</div>
+            <div class="label">Model:</div>
+            <div class="value">{{motorcycles.name}}</div>
         </div>
         <div class="label">Price:</div>
-        <div class="value">{{motorcycle.price}}</div>
+        <div class="value">{{motorcycles.price}}</div>
         <div class="label">Color:</div>
-        <div class="value">{{motorcycle.color}}</div>
+        <div class="value">{{motorcycles.color}}</div>
+        <div class="label">Engine Size:</div>
+        <div class="value">{{motorcycles.engineSize}}</div>
+        <div class="label">Horsepower:</div>
+        <div class="value">{{motorcycles.power}}</div>
+        <div class="label">Year:</div>
+        <div class="value">{{motorcycles.year}}</div>
+        <div class="label">Description:</div>
+        <div class="value">{{motorcycles.description}}</div>
     </div>
+
     <script src="src/details.js"></script>
 </body>
 

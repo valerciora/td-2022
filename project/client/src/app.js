@@ -13,13 +13,13 @@ function run() {
     methods: {
       deleteMotorcycle: function(id) {
         console.log('HTTP DELETE to backend, Motorcycle: '+id);
-        this.usersService.remove(id);
-        this.usersService.get().then(response => { this.motorcycles = response.data; console.log("Response: " + JSON.stringify(response.data))});
-       ;
+        this.usersService.remove(id).then(response => {
+          this.usersService.get().then(response => { this.motorcycles = response.data; console.log("Response: " + JSON.stringify(response.data))})});
+
       },
     }
   });
-//asta nu era comentata inainte
+
   //indexComponent.use(VueMaterial);
 
 }

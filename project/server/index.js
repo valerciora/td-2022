@@ -18,7 +18,7 @@ api.get('/motorcycles/:id', function (request, response) {
 
 api.put('/motorcycles', function (request, response) {
   saveMotorcycle(request.body);
-  response.json('User was saved succesfully');
+  response.json('Motorcycle was saved succesfully');
 });
 
 api.post('/motorcycles', function (request, response) {
@@ -50,7 +50,12 @@ api.delete('/motorcycles/:index', function (request, response) {
   let motorcycles = getMotorcycles();
   motorcycles.splice(request.params.index, 1);
   console.log('Motorcycle with index ' + request.params.index + ' was deleted');
-  console.dir(motorcycles);
+
+  try {
+    fs.writeFileSync(motorcyclesFilepath, JSON.stringify(motorcycles));
+  } catch (err) {
+    console.error(err)
+  }
   response.json(motorcycles);
 });
 
@@ -95,7 +100,7 @@ function getMotorcycleById(id){
   let motorcycles = getMotorcycles();// citire json din fisier
   let selectedMotorcycle = null;
   for(var i=0; i<motorcycles.length; i++) {
-    if(id === motorcycles[i].id) selectedMotorcycle = motorcycles[i];
+    if(id == motorcycles[i].id) selectedMotorcycle = motorcycles[i];
   }
   return selectedMotorcycle;
 }

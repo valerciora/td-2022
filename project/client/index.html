@@ -4,7 +4,7 @@
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
   <meta content="utf-8" http-equiv="encoding" />
-  <title>Users manager</title>
+  <title>Motorcycle Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/vue-material.css" />
@@ -30,12 +30,18 @@
       </li>
 
       <li v-for="motorcycle in motorcycles">
-        <div class="">
+        <div class="user-row">
           <a :href="'details.html?id='+motorcycle.id">{{ motorcycle.name }}</a>
-          <span class=""><i>{{ motorcycle.price }}</i></span>
-          <button class="delete-btn" v-on:click="deleteMotorcycle(motorcycle.id-1)">X</button>
-          <a :href="'update.html?id='+motorcycle.id" target="_self">Update</a>
         </div>
+          <div class="price-row">
+              <span class="price"><i>{{ motorcycle.price + " EUR" }}</i></span>
+          </div>
+          <div class="delete-btn">
+              <button class="delete-btn" v-on:click="deleteMotorcycle(motorcycle.id-1)">Delete</button>
+          </div>
+          <div class="update-btn">
+              <a :href="'update.html?id='+motorcycle.id" target="_self">Update</a>
+          </div>
       </li>
     </ul>
   </div>

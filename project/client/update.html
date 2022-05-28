@@ -1,14 +1,18 @@
 <html>
     <head>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/vue-material.css" />
         <script type="text/javascript" src="libs/vue.js"></script>
         <script type="text/javascript" src="libs/axios.js"></script>
     </head>
     <body>
         <a href="index.html">Home</a>
         <div id="update">
-            Update motorcycle with id: {{ id }} <br>
-            Name: <input type="text" v-model="motorcycle.name">
-            Power: <input type="text" v-model="motorcycle.power">
+            <div class="title">Update motorcycle with id: {{ id }} <br> </div>
+            <div class="user-row">Name: <input type="text" v-model="motorcycle.name"></div>
+            <div class="user-row">Power: <input type="text" v-model="motorcycle.power"></div>
+            <div class="user-row">Price: <input type="text" v-model="motorcycle.price"></div>
+            <div class="user-row">Description: <input type="text" v-model="motorcycle.description"></div>
             <button  v-on:click="update(motorcycle.id)">Save</button>
 
             <p>{{message}}</p>

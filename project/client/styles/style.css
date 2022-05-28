@@ -9,13 +9,15 @@ body {
 }
 
 .user-list {
-  padding: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
   list-style-type: none;
 }
 
 .title {
-  background-color: cornflowerblue;
-  border: 5px solid royalblue;
+  width:100%;
+  background-color: darkolivegreen;
+  border: 0px solid royalblue;
   padding: 15px 20px 10px 20px;
   color: white;
   font-size: 30px;
@@ -28,18 +30,36 @@ body {
   font-weight: bold;
   border-bottom: 2px solid #0053c0;
   border-radius: 3px;
+  font-size: 18px;
 }
 
 .user-row {
+  width:40%;
   border-bottom: 1px solid #e9e9e9;
   border-radius: 2px;
   padding: 15px 0px 5px 0px;
   text-align: left;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.price-row {
+  width:40%;
+  border-bottom: 1px solid #e9e9e9;
+  border-radius: 2px;
+  padding: 15px 0px 5px 0px;
+  text-align: left;
+  display: inline-block;
+  font-size: 20px;
 }
 
 .user-row:hover {
   background-color: #f3f3f3;
   cursor: pointer;
+}
+
+.price-row:hover {
+  background-color: #f3f3f3;
 }
 
 .user-name {
@@ -54,12 +74,25 @@ body {
 
 .delete-btn {
   width:60px;
-  height:20px;
+  height:35px;
   background: red;
   color: white;
   text-align: center;
+  display: inline-block;
 }
 
 .delete-btn:hover {
   background-color: brown;
+}
+
+.price {
+  align-self: end;
+  width: 40%;
+  display: inline-flex;
+}
+
+.update-btn {
+  display:inline-block;
+  text-align: center;
+  padding-left: 25px;
 }

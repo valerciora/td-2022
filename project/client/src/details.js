@@ -3,7 +3,7 @@ function run() {
       el: '#details',
       data: {
         id: 'default',
-        motorcycle: {}
+        motorcycles: {}
       },
       created: function () {
 
@@ -13,7 +13,7 @@ function run() {
 
         axios.get('http://localhost:3000/motorcycles/'+this.id).then(
             (response) => {
-                this.motorcycle = response.data;
+                this.motorcycles = response.data;
             }
         );
       },

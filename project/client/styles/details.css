@@ -9,13 +9,35 @@
 }
 
 .label {
+    font-family: "Calibri Light";
+    font-size:23px;
     padding:20px;
     flex:1;
     background-color:#fefefe;
 }
 
 .value {
+    font-family: "Calibri";
+    font-size:23px;
     padding: 20px;
     background-color: #aaa;
     flex:1;
+}
+
+.heading {
+    padding-left:6px;
+    height: auto;
+    background-color: skyblue;
+    border-radius:6px;
+    font-family: "calibri";
+    font-size:36px;
+}
+
+.home-btn {
+    background-color: darkolivegreen;
+    font-family: "Calibri";
+    font-size:19px;
+    padding: 15px;
+    padding-top:8px;
+    border-radius:10px;
 }

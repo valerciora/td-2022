@@ -34,5 +34,89 @@
         "year":2016,
         "price":"4500 EUR",
         "exhaust":"Akrapovic"
+    },
+    {
+        "id":4,
+        "name":"Yamaha Dragstar",
+        "power":"40",
+        "color":"black",
+        "fuel":"gas",
+        "engineSize":"650",
+        "description":"Cruiser bike",
+        "year":1999,
+        "price":"4000 EUR",
+        "exhaust":"Stock"
+    },
+    {
+        "id":5,
+        "name":"Ducati Monster",
+        "power":"51",
+        "color":"red",
+        "fuel":"gas",
+        "engineSize":"600",
+        "description":"Naked sportsbike",
+        "year":2001,
+        "price":"1800 EUR",
+        "exhaust":"Arrow"
+    },
+    {
+        "id":6,
+        "name":"BMW S1000RR",
+        "power":"175",
+        "color":"white",
+        "fuel":"gas",
+        "engineSize":"1000",
+        "description":"Racing sportsbike",
+        "year":2020,
+        "price":"25400 EUR",
+        "exhaust":"Akrapovic"
+    },
+    {
+        "id":7,
+        "name":"Suzuki Hayabusa",
+        "power":"230",
+        "color":"blue",
+        "fuel":"gas",
+        "engineSize":"1300",
+        "description":"Insane sportsbike",
+        "year":2016,
+        "price":"18500 EUR",
+        "exhaust":"Stock"
+    },
+    {
+        "id":8,
+        "name":"Honda Dominator",
+        "power":"43",
+        "color":"grey",
+        "fuel":"gas",
+        "engineSize":"650",
+        "description":"Enduro-Adventure Bike",
+        "year":1998,
+        "price":"2100 EUR",
+        "exhaust":"Stock"
+    },
+    {
+        "id":9,
+        "name":"Honda Hornet",
+        "power":"100",
+        "color":"gold",
+        "fuel":"gas",
+        "engineSize":"600",
+        "description":"Naked bike",
+        "year":2008,
+        "price":"3800 EUR",
+        "exhaust":"Nakamura"
+    },
+    {
+        "id":10,
+        "name":"Yamaha Fazer",
+        "power":"80",
+        "color":"blue/grey",
+        "fuel":"gas",
+        "engineSize":"600",
+        "description":"Sport-Touring bike",
+        "year":2003,
+        "price":"2700 EUR",
+        "exhaust":"Stock"
     }
 ]
